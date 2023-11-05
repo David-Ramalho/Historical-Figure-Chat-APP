@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Chat App Title</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/chat.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/HistoricalSciFiChat.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <!-- Header content -->
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="figures-selection">
+                <h2>Select a Historical Figure to Chat With:</h2>
+                <!-- Example with Albert Einstein, you'll replace src with the actual image path -->
+                <div class="figure" data-figure-name="Albert" id="albertEinstein">
+                    <img src="/css/images/albert.png" alt="Albert Einstein" class="figure-img img-fluid rounded" />
+                    <p class="figure-caption">Albert Einstein</p>
+                </div>
+                <div class="figure" data-figure-name="Newton" id="Newton">
+                    <img src="/css/images/newton.png" alt="Isaac Newton" class="figure-img img-fluid rounded" />
+                    <p class="figure-caption">Isaac Newton</p>
+                </div>
+                <div class="figure" data-figure-name="Aristotle" id="Aristotle">
+                    <img src="/css/images/aristotle.png" alt="Aristotle" class="figure-img img-fluid rounded" />
+                    <p class="figure-caption">Aristotle</p>
+                </div>
+                <div class="figure" data-figure-name="Napoleon" id="Napoleon">
+                    <img src="/css/images/Napoleon.png" alt="Napoleon" class="figure-img img-fluid rounded" />
+                    <p class="figure-caption">Napoleon</p>
+                </div>
+                <div class="figure" data-figure-name="Karl Max" id="karlmax">
+                    <img src="/css/images/karlmax.png" alt="karlmax" class="figure-img img-fluid rounded" />
+                    <p class="figure-caption">karlmax</p>
+                </div>
+                <div class="figure" data-figure-name="Adam Smith" id="AdamSmith">
+                    <img src="/css/images/AdamSmith.png" alt="AdamSmith" class="figure-img img-fluid rounded" />
+                    <p class="figure-caption">AdamSmith</p>
+                </div>
+                <button id="playButton">Play</button>
+            </div>
+            <div class="chat-container">
+                <div id="chatDisplay" class="chat-display"></div> <!-- Chat display area added -->
+                <input type="text" id="textBox" placeholder="Type your message here..." class="form-control" />
+                <button type="button" id="sendButton" class="btn btn-primary">Send</button>
+            </div>
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <!-- Footer content -->
+    </footer>
+
+    <!-- Scripts at the bottom before closing body tag -->
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js" asp-append-version="true"></script>
+    <script src="/js/chat.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

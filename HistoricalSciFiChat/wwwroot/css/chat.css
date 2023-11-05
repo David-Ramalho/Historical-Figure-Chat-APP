@@ -1,0 +1,165 @@
+﻿/* chat.css */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #004080;
+}
+
+.figures-selection {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.figure {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+    .figure:hover {
+        background-color: #e0e0e0;
+        cursor: pointer;
+    }
+
+    .figure.active {
+        border: 3px solid #4CAF50;
+    }
+
+.figure-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #0056b3;
+    margin-bottom: 5px;
+}
+
+.figure-caption {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.chat-container {
+    padding: 20px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input[type='text'], textarea {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .figure-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    input[type='text'], textarea {
+        width: 70%;
+    }
+
+    button {
+        width: 28%;
+    }
+}
+
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user {
+    background-color: #4CAF50;
+    color: white;
+    align-self: flex-end;
+    order: 1;
+}
+
+.figure-message {
+    background-color: #e6e6e6;
+    color: #333;
+    align-self: flex-start;
+    order: 0;
+}
+
+
+#playButton {
+    width: 100px;
+    padding: 12px 20px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    #playButton:hover {
+        opacity: 0.8;
+    }
+
+    .chat-container {
+        display: none;
+        /* ... rest of the styles remain unchanged */
+    }
